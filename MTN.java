@@ -42,13 +42,34 @@ public class MTN {
   }
 
   public static void main(String[] args) {
-    
+    MTN mtn = new MTN();
+    MTN.LinkedList l1 = mtn.new LinkedList();
+    MTN.LinkedList l2 = mtn.new LinkedList();
+
+    // add nodes to the first list
+    l1.head = mtn.new Node();
+    l1.head.data = 1;
+    Node second1 = mtn.new Node();
+    second1.data = 2;
+    l1.head.next = second1;
+    Node third1 = mtn.new Node();
+    third1.data = 3;
+    second1.next = third1;
+
+    // add nodes to the second list
+    l2.head = mtn.new Node();
+    l2.head.data = 4;
+    Node second2 = mtn.new Node();
+    second2.data = 5;
+    l2.head.next = second2;
+    Node third2 = mtn.new Node();
+    third2.data = 6;
+    second2.next = third2;
+
+    System.out.println("First list: ");
+    MTN.printList(l1.head);
+    System.out.println("Second list: ");
+    MTN.printList(l2.head);
+    System.out.println("Product of the two lists: " + mtn.multiplyLists(l1, l2));
   }
 }
-// n = 3
-// 0, Ahmed
-// 1, Mona
-// 2, Khaled
-// 3, Micky~Mimi~Toto (temp.next -> temp)
-// 4, medhat (temp.next.next -> temp.next)
-
